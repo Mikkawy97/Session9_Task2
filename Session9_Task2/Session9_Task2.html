@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+   
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/main.css">
+   
+
+  </head>
+  <body>
+    <div class="gencontainer">
+      <div class="d-none nav-pane">
+        <div class="close-wrap">
+          <i onclick="close_tab()" class="fa-sharp fa-regular fa-x"></i>
+        </div>
+        <div class="custom-tabs d-flex align-items-center justify-content-between m-0">
+          <div id="women_tab" class="tab-item tab-item-active " onclick="women_tab()">Women</div>
+          <div  id="man_tab" class="tab-item" onclick="man_tab()">Man</div>
+          <div id="kids_tab" class="tab-item" onclick="kids_tab()">Kids</div>
+        </div>
+        <div id="menu_wrap" class="menu-wrap" data-mik=1>
+          
+
+
+        </div>
+      </div>
+      <div class="d-none buy-pane">
+        <div class="close-wrap">
+          <i onclick="close_buy()" class="fa-sharp fa-regular fa-x"></i>
+        </div>
+        <div class="shoping-sect">
+          <div class="cart_style">CART</div>
+        
+
+        </div>
+      
+        
+          
+
+
+        </div>
+      </div>
+   
+        <div class="header d-flex align-items-center justify-content-between">
+          <div class="menu-wrap">
+            <img src="./assets/Menu.png" onclick="opennav_pane()" class="img-fluid" />
+          </div>
+          <div class="logo-wrap">
+            <img src="./assets/Logo (3).png" class="img-fluid" />
+          </div>
+          <div class="icons-wrap d-flex align-items-center">
+            <img src="./assets/Search.png" class="img-fluid mr-20" />
+            <img src="./assets/shopping bag.png" onclick="open_buy()" class="img-fluid" />
+          </div>
+
+        </div>
+        <div class="row m-0 slider-sect">
+        <div class="owl-carousel owl-theme">
+          <div class="item"><img src="./assets/Rectangle 344.png" class="img-fluid" /></div>
+          <div class="item"><img src="./assets/Rectangle 344.png" class="img-fluid" /></div>
+          <div class="item"><img src="./assets/Rectangle 344.png" class="img-fluid" /></div>
+          <div class="item"><img src="./assets/Rectangle 344.png"  class="img-fluid" /></div>
+
+        
+        </div>
+      </div>
+      <div class="row m-0 item_details">
+        <div class="title">Mohan</div>
+        <div class="subtitle">Recycle Boucle Knit Cardigan Pink</div>
+        <div class="price">$120</div>
+      </div>
+      <div class="d-flex align-items-center m-0 styling_sect">
+          <div class="d-flex align-items-center pr-35">
+            <div class="title">color</div>
+            <div id="color1" onclick="selectCircle(1)" class="circle bg-black"></div>
+            <div id="color2" onclick="selectCircle(2)" class="circle bg-orange"></div>
+            <div id="color3" onclick="selectCircle(3)" class="circle bg-gray"></div>
+
+          </div>
+          <div class="d-flex align-items-center">
+            <div  class="title">Size</div>
+            <div id="size1" onclick="selectCircle(4)" class="circle bg-black">S</div>
+            <div id="size2" onclick="selectCircle(5)" class="circle bg-white">M</div>
+            <div id="size3" onclick="selectCircle(6)" class="circle bg-white">L</div>
+
+          </div>
+
+      </div>
+        <div id="mainfoot"class="footer-black  ">
+          <div id="foot" class="d-flex justify-content-between">
+          <div  class="d-flex align-items-center" onclick="openbasket()">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <div class="title">add to basket</div>
+          </div>
+          <i class="fa fa-heart" aria-hidden="true"></i>
+        </div>
+        </div>
+      </div>
+   
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+   <script>
+            var count;
+            var minus;
+            var plus;
+            var collect_items=0;
+            var counter=$('<div id="counter"></div>');
+            counter.addClass("d-flex align-items-center justify-content-center ");
+            var noitem=$('<div></div>');
+            var cart=$('<div></div>');
+            var subprice=$('<div></div>');
+            var totalsect=$('<div></div>');
+          totalsect.addClass("d-flex align-items-center justify-content-between");
+          subprice.addClass("subtotal_price");
+          var d=$('<div></div>');
+          d.addClass('detailss');
+          d.text("*shipping charges, taxes and discount codes are calculated at the time of accounting.");
+            var data =[
+               { "navitem":"women",
+                "subnav":[
+                {
+                "id":1,
+                "menu_name":"item1",
+                "submenu":[
+                  {
+                    "submenu_name":"item1",
+                  },
+                  {
+                    "submenu_name":"item2",
+                  },
+
+                ]
+                },
+                {
+                "id":2,
+                "menu_name":"item2",
+                "submenu":[
+                  {
+                    "submenu_name":"Outer",
+                  },
+                  {
+                    "submenu_name":"Dress",
+                  },
+                  {
+                    "submenu_name":"Blouse/Shirt",
+                  },
+                 
+                  {
+                    "submenu_name":"Denim",
+                  },
+                  {
+                    "submenu_name":"Kids",
+                  },
+
+                ]
+                },
+                {
+                "id":3,
+                "menu_name":"item3",
+                "submenu":[
+                  {
+                    "submenu_name":"item1",
+                  },
+                  {
+                    "submenu_name":"item2",
+                  },
+
+                ]
+                },
+                {
+                "id":4,
+                "menu_name":"item4",
+                "submenu":[
+                  {
+                    "submenu_name":"item1",
+                  },
+                  {
+                    "submenu_name":"item2",
+                  },
+
+                ]
+                },
+                {
+                "id":5,
+                "menu_name":"Item5",
+                "submenu":[
+                  {
+                    "submenu_name":"item1",
+                  },
+                  {
+                    "submenu_name":"item2",
+                  },
+
+                ]
+                }]
+              },
+              {
+                "navitem":"man",
+                "subnav":[
+                {
+                "id":1,
+                "menu_name":"New",
+                "submenu":[
+                  {
+                    "submenu_name":"item1",
+                  },
+                  {
+                    "submenu_name":"item2",
+                  },
+
+                ]
+                },
+                {
+                "id":2,
+                "menu_name":"Apparel",
+                "submenu":[
+                  {
+                    "submenu_name":"Outer",
+                  },
+                  {
+                    "submenu_name":"Dress",
+                  },
+                  {
+                    "submenu_name":"Blouse/Shirt",
+                  },
+                  {
+                    "submenu_name":"T-shirt",
+                  },
+                  {
+                    "submenu_name":"Knitwear",
+                  },
+                  {
+                    "submenu_name":"Skirt",
+                  },
+                  {
+                    "submenu_name":"Pants",
+                  },
+                  {
+                    "submenu_name":"Denim",
+                  },
+                  {
+                    "submenu_name":"Kids",
+                  },
+
+                ]
+                },
+                {
+                "id":3,
+                "menu_name":"Bag",
+                "submenu":[
+                  {
+                    "submenu_name":"item1",
+                  },
+                  {
+                    "submenu_name":"item2",
+                  },
+
+                ]
+                },
+                {
+                "id":4,
+                "menu_name":"Shoes",
+                "submenu":[
+                  {
+                    "submenu_name":"item1",
+                  },
+                  {
+                    "submenu_name":"item2",
+                  },
+
+                ]
+                },
+                {
+                "id":5,
+                "menu_name":"Beauty",
+                "submenu":[
+                  {
+                    "submenu_name":"item1",
+                  },
+                  {
+                    "submenu_name":"item2",
+                  },
+
+                ]
+                },
+                {
+                "id":6,
+                "menu_name":"Accessories",
+                "submenu":[
+                  {
+                    "submenu_name":"item1",
+                  },
+                  {
+                    "submenu_name":"item2",
+                  },
+
+                ]
+                },
+                ]
+
+              },
+              {
+                "navitem":"kids",
+                "subnav":[
+                {
+                "id":1,
+                "menu_name":"item1",
+                "submenu":[
+                  {
+                    "submenu_name":"item1",
+                  },
+                  {
+                    "submenu_name":"item2",
+                  },
+
+                ]
+                },
+                {
+                "id":2,
+                "menu_name":"item2",
+                "submenu":[
+                  {
+                    "submenu_name":"Outer",
+                  },
+                  {
+                    "submenu_name":"Dress",
+                  },
+                  {
+                    "submenu_name":"Blouse/Shirt",
+                  },
+                  {
+                    "submenu_name":"T-shirt",
+                  },
+                  {
+                    "submenu_name":"Knitwear",
+                  },
+                  {
+                    "submenu_name":"Skirt",
+                  },
+                  {
+                    "submenu_name":"Pants",
+                  },
+                  {
+                    "submenu_name":"Denim",
+                  },
+                  {
+                    "submenu_name":"Kids",
+                  },
+
+                ]
+                },
+                {
+                "id":3,
+                "menu_name":"item3",
+                "submenu":[
+                  {
+                    "submenu_name":"item1",
+                  },
+                  {
+                    "submenu_name":"item2",
+                  },
+
+                ]
+                },
+
+                ]
+              }
+          
+               
+                
+                
+        ];
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        })
+
+        $( document ).ready(function() {
+            menuBinding();
+        
+          });
+          
+          function returncollectitems() {
+            return collect_items;
+          }
+         function openbasket() {
+          
+          collect_items=1;
+          $('#foot').addClass('d-none');
+         
+         
+          $('#counter').removeClass("d-none");
+          minus=$('<i id="minus"></i>');
+          minus.addClass("fa fa-minus-circle mr-15");
+          count=$('<div></div>');
+          count.addClass('mr-15 price');
+          count.text(collect_items);
+          plus=$('<i id="plus"></i>');
+          plus.addClass("fa fa-plus-circle");
+          counter.empty();
+          counter.append(minus).append(count).append(plus);
+          $('#mainfoot').append(counter);
+       
+           plus.click(function(){
+            collect_items++;
+           count.text(collect_items);
+           subprice.text(collect_items*120);
+          
+        });
+        minus.click(function(){
+          if(collect_items==1){
+              collect_items=0;
+              emptybasket();
+              subprice.text(collect_items*120);
+          
+            }
+            else{
+              collect_items--;
+              count.text(collect_items);
+              subprice.text(collect_items*120);
+            }
+          
+        });
+     
+         } 
+        function emptybasket() {
+            $('#counter').addClass("d-none");
+            $('#foot').removeClass('d-none');
+
+        }
+        function selectCircle(id) {
+          switch (id) {
+            case 1:$('#color1').addClass("circle-color-selected");
+                    $('#color2').removeClass("circle-color-selected");
+                    $('#color3').removeClass("circle-color-selected");
+                    break;
+            case 2:$('#color2').addClass("circle-color-selected");
+                    $('#color1').removeClass("circle-color-selected");
+                    $('#color3').removeClass("circle-color-selected"); 
+                    break;
+            case 3:$('#color3').addClass("circle-color-selected");
+                    $('#color2').removeClass("circle-color-selected");
+                    $('#color1').removeClass("circle-color-selected");  
+                    break; 
+            case 4:$('#size1').addClass("bg-black").removeClass('bg-white');;
+                    $('#size2').removeClass("bg-black").addClass('bg-white');
+                    $('#size3').removeClass("bg-black").addClass('bg-white');  
+                    break;   
+            case 5:$('#size2').addClass("bg-black").removeClass('bg-white');
+                    $('#size1').removeClass("bg-black").addClass('bg-white');
+                    $('#size3').removeClass("bg-black").addClass('bg-white'); 
+                    break;
+            case 6:$('#size3').addClass("bg-black").removeClass('bg-white');
+                    $('#size2').removeClass("bg-black").addClass('bg-white');
+                    $('#size1').removeClass("bg-black").addClass('bg-white'); 
+                    break;                      
+              
+              
+          
+          }
+
+        }
+        function menuBinding() {
+          var d=Number( $('#menu_wrap').attr("data-mik"));
+          $('#menu_wrap').empty();
+           for (let index = 0; index < data[d].subnav.length; index++) {
+            var menuwrapper=$('<div id="sub'+d+''+index+'" ></div>');
+            var menuitem=$('<div ></div>');
+            menuitem.addClass("d-flex align-items-center justify-content-between menu-item");
+            var menutitle=$('<div></div>');
+            menutitle.text(data[d].subnav[index].menu_name);
+            menutitle.addClass("menu-name");
+            var temp=data[d].subnav[index].menu_name;
+            var iconar=$('<i id="i'+d+''+index+'" onclick="subitem('+d+','+index+')"></i>');
+            
+            menuwrapper.attr("data-ms-toggle",'true');
+          
+            iconar.addClass("fa fa-chevron-down");
+            $('#menu_wrap').append(menuwrapper.append(menuitem.append(menutitle).append(iconar)));
+            
+           }
+        }
+      
+          
+
+      
+        function subitem(d,i){
+          
+          var flag=$('#sub'+d+i).attr("data-ms-toggle");
+          if (flag=='true'){
+          $('#i'+d+i).removeClass("fa fa-chevron-down").addClass("fa fa-chevron-up");
+          var subitemswrap=$('<div id="subitems_wrap"></div>');
+          subitemswrap.addClass("subitems-wrap");
+
+          var subitems=$('<div></div>');
+          subitems.addClass("subitems_pane")
+          for (let index = 0; index < data[d].subnav[i].submenu.length; index++) {
+            var item=$('<div class="item"></div>');
+            item.text(data[d].subnav[i].submenu[index].submenu_name);
+            subitems.append(item);
+            
+            
+          }
+          $('.subitems-wrap').empty();
+          $('#sub'+d+i).append(subitemswrap.append(subitems));
+          $('#sub'+d+i).attr("data-ms-toggle",'false');
+        }
+        else{
+
+          $('#i'+d+i).removeClass("fa fa-chevron-up").addClass("fa fa-chevron-down");
+          $('#sub'+d+i).attr("data-ms-toggle",'true');
+          $('.subitems-wrap').empty();
+
+        }
+
+        }
+         
+ 
+    function opennav_pane(){
+
+      $('.nav-pane').removeClass('d-none').addClass('d-block ');
+    }
+    function close_tab(){
+
+      $('.nav-pane').removeClass('d-block').addClass('d-none');
+      }
+      function open_buy(){
+
+      $('.buy-pane').removeClass('d-none').addClass('d-block ');
+      
+      if(collect_items==0){
+       
+        
+
+        noitem.addClass("d-flex justify-content-center align-items-center he-500");
+        var text=$('<div></div>');
+        text.addClass('noitem-text');
+        text.text("You have no items in your Shopping Bag.");
+        noitem.append(text);
+        $('.buy-pane').append(noitem);
+      }
+      else{
+        noitem.addClass('d-none');
+          cart.remove();
+          cart=$('<div></div>');
+          cart.addClass("d-flex align-items-center mt-1 pb-200 item_details");
+          var image=$('<img />');
+          image.attr('src','./assets/Rectangle 345.png');
+          image.addClass('img-fluid mr-10');
+          var cartdetails=$('<div></div>');
+          var productname=$('<div></div>');
+          productname.text("Mohan");
+          productdetails=$('<div></div>');
+          productdetails.text("Recycle Boucle Knit Cardigan Pink");
+          var price=$('<div></div>');
+          price.text('$120');
+          price.addClass('price');
+          cart.append(image).append(cartdetails.append(productname).append(productdetails).append(counter).append(price));
+          totalsect.empty();
+          var hr=$('<hr></hr>');
+          var subtext=$('<div></div>');
+          subtext.addClass("subtotal_text");
+          subtext.text("Sub total");
+          subprice.text(collect_items*120);
+          
+          
+          totalsect.append(subtext).append(subprice);
+          $('.buy-pane').append(cart).append(hr).append(totalsect).append(d);
+
+
+          
+      }
+      }
+      function close_buy(){
+
+      $('.buy-pane').removeClass('d-block').addClass('d-none');
+      if(collect_items==0){
+        $('#foot').addClass('d-block').removeClass('d-none');
+
+
+      }
+      else{
+        $('#mainfoot').append(counter);
+      }
+      }
+          function man_tab(){
+        
+        $('#man_tab').addClass('tab-item-active');
+        $('#women_tab').removeClass('tab-item-active');
+        $('#kids_tab').removeClass('tab-item-active');
+      
+        $('#menu_wrap').attr("data-mik",0);
+        
+        menuBinding();
+      
+      }
+      function women_tab(){
+   
+        $('#women_tab').addClass('tab-item-active');
+        $('#man_tab').removeClass('tab-item-active');
+        $('#kids_tab').removeClass('tab-item-active');
+       
+        
+        $('#menu_wrap').attr("data-mik",1);
+        menuBinding();
+      
+      }
+      function kids_tab(){
+   
+          $('#kids_tab').addClass('tab-item-active');
+          $('#man_tab').removeClass('tab-item-active');
+        $('#women_tab').removeClass('tab-item-active');
+       
+        $('#menu_wrap').attr("data-mik",2);
+        menuBinding();
+        }
+    </script>
+   
+  </body>
+</html>
